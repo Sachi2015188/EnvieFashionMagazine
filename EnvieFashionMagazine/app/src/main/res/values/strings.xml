@@ -12,4 +12,85 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
 
+    <!-- ギャラリーに表示する画像 -->
+    <array name="coverID">
+        <item>@drawable/envie_2014_02</item>
+        <item>@drawable/envie_2014_01</item>
+        <item>@drawable/envie_2013_12</item>
+        <item>@drawable/envie_2013_11</item>
+        <item>@drawable/envie_2013_10</item>
+        <item>@drawable/envie_2013_09</item>
+        <item>@drawable/envie_2013_08</item>
+        <item>@drawable/envie_2013_07</item>
+        <item>@drawable/envie_2013_06</item>
+        <item>@drawable/envie_2013_05</item>
+        <item>@drawable/envie_2013_04</item>
+        <item>@drawable/envie_2013_03</item>
+        <item>@drawable/envie_2013_02</item>
+        <item>@drawable/envie_2013_01</item>
+        <item>@drawable/envie_2012_12</item>
+        <item>@drawable/envie_2012_11</item>
+        <item>@drawable/envie_2012_10</item>
+        <item>@drawable/envie_2012_09</item>
+        <item>@drawable/envie_2012_08</item>
+        <item>@drawable/envie_2012_07</item>
+        <item>@drawable/envie_2012_06</item>
+        <item>@drawable/envie_2012_05</item>
+        <item>@drawable/envie_2012_04</item>
+        <item>@drawable/envie_2012_03</item>
+        <item>@drawable/envie_2012_02</item>
+        <item>@drawable/envie_2012_01</item>
+        <item>@drawable/envie_2011_12</item>
+        <item>@drawable/envie_2011_11</item>
+        <item>@drawable/envie_2011_10</item>
+        <item>@drawable/envie_2011_09</item>
+        <item>@drawable/envie_2011_08</item>
+        <item>@drawable/envie_2011_07</item>
+        <item>@drawable/envie_2011_06</item>
+        <item>@drawable/envie_2011_05</item>
+        <item>@drawable/envie_2011_03</item>
+        <item>@drawable/envie_2011_02</item>
+        <item>@drawable/envie_2011_01</item>
+    </array>
+
+    <array name="thumbnail">
+        <item>@drawable/envie_thumbnail_2014_02</item>
+        <item>@drawable/envie_thumbnail_2014_01</item>
+        <item>@drawable/envie_thumbnail_2013_12</item>
+        <item>@drawable/envie_thumbnail_2013_11</item>
+        <item>@drawable/envie_thumbnail_2013_10</item>
+        <item>@drawable/envie_thumbnail_2013_09</item>
+        <item>@drawable/envie_thumbnail_2013_08</item>
+        <item>@drawable/envie_thumbnail_2013_07</item>
+        <item>@drawable/envie_thumbnail_2013_06</item>
+        <item>@drawable/envie_thumbnail_2013_05</item>
+        <item>@drawable/envie_thumbnail_2013_04</item>
+        <item>@drawable/envie_thumbnail_2013_03</item>
+        <item>@drawable/envie_thumbnail_2013_02</item>
+        <item>@drawable/envie_thumbnail_2013_01</item>
+        <item>@drawable/envie_thumbnail_2012_12</item>
+        <item>@drawable/envie_thumbnail_2012_11</item>
+        <item>@drawable/envie_thumbnail_2012_10</item>
+        <item>@drawable/envie_thumbnail_2012_09</item>
+        <item>@drawable/envie_thumbnail_2012_08</item>
+        <item>@drawable/envie_thumbnail_2012_07</item>
+        <item>@drawable/envie_thumbnail_2012_06</item>
+        <item>@drawable/envie_thumbnail_2012_05</item>
+        <item>@drawable/envie_thumbnail_2012_04</item>
+        <item>@drawable/envie_thumbnail_2012_03</item>
+        <item>@drawable/envie_thumbnail_2012_02</item>
+        <item>@drawable/envie_thumbnail_2012_01</item>
+        <item>@drawable/envie_thumbnail_2011_12</item>
+        <item>@drawable/envie_thumbnail_2011_11</item>
+        <item>@drawable/envie_thumbnail_2011_10</item>
+        <item>@drawable/envie_thumbnail_2011_09</item>
+        <item>@drawable/envie_thumbnail_2011_08</item>
+        <item>@drawable/envie_thumbnail_2011_07</item>
+        <item>@drawable/envie_thumbnail_2011_06</item>
+        <item>@drawable/envie_thumbnail_2011_05</item>
+        <item>@drawable/envie_thumbnail_2011_03</item>
+        <item>@drawable/envie_thumbnail_2011_02</item>
+        <item>@drawable/envie_thumbnail_2011_01</item>
+    </array>
+
 </resources>

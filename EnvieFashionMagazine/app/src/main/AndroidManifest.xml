@@ -3,6 +3,8 @@
     package="team.envie.fashion.magazin.app" >
 
     <application
+        android:largeHeap="true"
+        android:hardwareAccelerated="true"
         android:name=".activity.ApplicationController"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
