@@ -13,6 +13,7 @@
         android:layout_weight=".3">
 
         <fragment
+            android:id="@+id/test1"
             android:name="team.envie.fashion.magazin.app.fragment.MainImageFragment"
             android:layout_width="0dp"
             android:layout_height="match_parent"

@@ -7,16 +7,30 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.InflateException;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import team.envie.fashion.magazin.app.R;
+import team.envie.fashion.magazin.app.utils.Logged;
 
+/**
+ * MainActivity
+ * <p>
+ *     MainActivity
+ *     orientation portrait
+ * </p>
+ * @version 1.0.0
+ */
 public class MainActivity extends ActionBarActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
+
+    private MainActivity self = this;
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -57,12 +71,15 @@ public class MainActivity extends ActionBarActivity
         switch (number) {
             case 1:
                 mTitle = getString(R.string.title_section1);
+                Toast.makeText(self, "AAA", Toast.LENGTH_SHORT).show();
                 break;
             case 2:
                 mTitle = getString(R.string.title_section2);
+                Toast.makeText(self, "BBB", Toast.LENGTH_SHORT).show();
                 break;
             case 3:
                 mTitle = getString(R.string.title_section3);
+                Toast.makeText(self, "CCC", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
@@ -128,7 +145,12 @@ public class MainActivity extends ActionBarActivity
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            View rootView = null;
+            try {
+                rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            } catch (InflateException e) {
+                Logged.e("---" + Log.getStackTraceString(e) + "---", new Throwable());
+            }
 //            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
 //            textView.setText(Integer.toString(getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
@@ -139,6 +161,11 @@ public class MainActivity extends ActionBarActivity
             super.onAttach(activity);
             ((MainActivity) activity).onSectionAttached(
                     getArguments().getInt(ARG_SECTION_NUMBER));
+        }
+
+        @Override
+        public void onDestroyView() {
+            super.onDestroyView();
         }
     }
 

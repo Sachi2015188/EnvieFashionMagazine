@@ -2,15 +2,16 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:orientation="vertical"
-              android:background="@color/light_blue"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
-    <com.devsmart.android.ui.HorizontalListView
-        android:id="@+id/horizon_list"
+    <Gallery
+        android:id="@+id/gallery"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ddd"
-        />
+        android:gravity="center"
+        android:spacing="9dp"
+        android:unselectedAlpha="0.5">
+        </Gallery>
 
 </LinearLayout>

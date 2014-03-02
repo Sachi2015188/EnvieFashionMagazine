@@ -2,19 +2,23 @@ package team.envie.fashion.magazin.app.fragment;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.Gallery;
 import android.widget.ImageView;
 
 import com.androidquery.AQuery;
-import com.devsmart.android.ui.HorizontalListView;
 
 import team.envie.fashion.magazin.app.R;
+import team.envie.fashion.magazin.app.chain.main.ChainPreference;
 import team.envie.fashion.magazin.app.utils.Logged;
 
 
@@ -28,34 +32,51 @@ import team.envie.fashion.magazin.app.utils.Logged;
  */
 public class MainListView extends BaseFragment {
 
-    /** HorizontalListView */
-    private HorizontalListView mHorizontalListView;
+    /** Gallery */
+    private Gallery mGallery;
     /** Adapter */
     private PlaceAdapter mPlaceAdapter;
 
+    public static MainListView newInstance(int sectionNumber) {
+        MainListView fragment = new MainListView();
+        Bundle args = new Bundle();
+        args.putInt("num", sectionNumber);
+        fragment.setArguments(args);
+        return fragment;
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        Fragment fragment = fragmentManager.findFragmentById(R.id.test1);
+        View view1 = fragment.getView();
+        ImageView image = (ImageView)view1.findViewById(R.id.main_image);
+        image.setImageResource(R.drawable.envie_2011_05);
         return inflater.inflate(R.layout.fragment_main_listview, container, false);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
 
-        TypedArray images = getResources().obtainTypedArray(R.array.thumbnail);
-        mPlaceAdapter = new PlaceAdapter(getActivity(), images);
-        mHorizontalListView = (HorizontalListView) view.findViewById(R.id.horizon_list);
-        mHorizontalListView.setAdapter(mPlaceAdapter);
-        mHorizontalListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Logged.w("--" + i+"--");
-            }
-        });
+        TypedArray thumbnails = getResources().obtainTypedArray(R.array.thumbnail);
+
+        mPlaceAdapter = new PlaceAdapter(getActivity(), thumbnails);
+        mGallery = (Gallery) view.findViewById(R.id.gallery);
+        mGallery.setAdapter(mPlaceAdapter);
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        mGallery.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Logged.w("--" + position +"--");
+                ChainPreference chainPref = new ChainPreference(getActivity());
+                chainPref.save("num", position);
+//                newInstance(position);
+            }
+        });
     }
 
     /**
@@ -86,8 +107,9 @@ public class MainListView extends BaseFragment {
         }
 
         @Override
-        public Drawable getItem(int position) {
-            return mTypedArray.getDrawable(position);
+        public Bitmap getItem(int position) {
+            Bitmap bitmap = ((BitmapDrawable) mTypedArray.getDrawable(position)).getBitmap();
+            return bitmap;
         }
 
         @Override
@@ -110,7 +132,7 @@ public class MainListView extends BaseFragment {
             }
 
             AQuery aq = new AQuery(convertView);
-            aq.id(R.id.item_list_image).image(getItem(position));
+            aq.id(holder.image).image(getItem(position));
 
             return convertView;
         }

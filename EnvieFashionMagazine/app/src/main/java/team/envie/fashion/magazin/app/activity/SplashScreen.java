@@ -38,7 +38,7 @@ public class SplashScreen extends FragmentActivity {
     public static class PlaceholderFragment extends BaseFragment {
 
         // Set Duration of the Splash Screen
-        int Delay = 2500;
+        int Delay = 2000;
 
         public PlaceholderFragment() {
         }
