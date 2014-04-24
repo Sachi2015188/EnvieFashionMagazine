@@ -1,19 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">EnvieFashionMagazine</string>
-    <string name="hello_world">Hello world!</string>
+    <!--
+
+                Default value
+
+     -->
+
     <string name="action_settings">Settings</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_section1">Section 1</string>
-    <string name="title_section2">Section 2</string>
-    <string name="title_section3">Section 3</string>
+    <string name="title_section1">HOME</string>
+    <string name="title_section2">LANGUAGE</string>
+    <string name="title_section3">SNS</string>
+    <string name="title_section4">DEMANDA</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_example">Example action</string>
+    <string name="newmagazine">What\'s New\nEn View\nFashion\nMagazine</string>
+    <string name="directoryName">/En Vie Magazine/English</string>
+    <string name="app_name">En Vie Magazine</string>
 
-    <!-- ギャラリーに表示する画像 -->
+    <string name="ダウンロードしますか">Do you want to download?</string>
+    <string name="menu_settings">Settings</string>
+    <string name="最新号">"En Vie　New Issue\n'2014'03'EN "</string>
+    <string name="最新号がライブラリに追加">A new issue is available in the library.</string>
+    <string name="戻る">Back</string>
+    <string name="キャンセル">Cancel</string>
+    <string name="共有">Share</string>
+    <string name="その他">More</string>
+    <string name="設定">Settings</string>
+    <string name="ログイン">Login</string>
+    <string name="送信">Send</string>
+    <string name="削除">Delete issue</string>
+    <string name="ダウンロードに失敗しました">Failed to download</string>
+    <string name="閲覧">View</string>
+    <string name="無料ダウンロード">Free\nDownload</string>
+    <string name="ダウンロード中">Now Downloading…</string>
+    <string name="キーボードを隠す">Hide keyboard</string>
+    <string name="成功">Successfully shared</string>
+    <string name="認証成功">Successfully authenticated</string>
+    <string name="認証">Authenticate</string>
+    <string name="メッセージが140文字を超えています">Message is over 140 characters.</string>
+    <string name="サイトへ行く">Go to site</string>
+    <string name="最新号が出版された時に自動的にダウンロードすることを希望します">I would like to subscribe and download automatically when the new issue comes out.</string>
+    <string name="アンケート">feedback</string>
+    <string name="提案">proposal</string>
+    <string name="表紙">Cover</string>
+    <string name="目次">Contents</string>
+    <string name="閉じる">Close</string>
+    <string name="サーバーへの接続に失敗しました">Failed to connect to server</string>
+    <string name="こんにちはアンケート協力">Hi There! Do you enjoy reading En Vie? Help us to make it even better by filling out our survey!</string>
+    <string name="インストールされていません">Not installed</string>
+    <string name="要望">demanda</string>
+    <string name="言語">Language</string>
+    <string name="SNS">SNS</string>
+    <string name="ダウンロードが完了しました">Download is complete</string>
+    <string name="EnVieMagazineのフォルダにダウンロードされました">Downloaded the En Vie folder</string>
+    <string name="EnVieMagazineのフォルダが新規作成されました">Create a new folder En Vie Magazine</string>
+    <string name="downloadPDF">En Vie Magazine/English</string>
+    <string name="Library">librar</string>
+    <string name="上の階層">Upper hierarchy</string>
+    <string name="お問い合わせ">contact us</string>
+    <string name="ダウンロード後にフォルダが作成されます">The folder is created after download</string>
+
+    <!-- download File Name -->
+    <array name="dlFileName">
+        <item>"En Vie'2014'04'EN.pdf"</item>
+        <item>"En Vie'2014'03'EN.pdf"</item>
+        <item>"En Vie'2014'02'EN.pdf"</item>
+        <item>"En Vie'2014'01'EN.pdf"</item>
+        <item>"En Vie'2013'12'EN.pdf"</item>
+        <item>"En Vie'2013'11'EN.pdf"</item>
+        <item>"En Vie'2013'10'EN.pdf"</item>
+        <item>"En Vie'2013'09'EN.pdf"</item>
+        <item>"En Vie'2013'08'EN.pdf"</item>
+        <item>"En Vie'2013'07'EN.pdf"</item>
+        <item>"En Vie'2013'06'EN.pdf"</item>
+        <item>"En Vie'2013'05'EN.pdf"</item>
+        <item>"En Vie'2013'04'EN.pdf"</item>
+        <item>"En Vie'2013'03'EN.pdf"</item>
+        <item>"En Vie'2013'02'EN.pdf"</item>
+        <item>"En Vie'2013'01'EN.pdf"</item>
+        <item>"En Vie'2012'12'EN.pdf"</item>
+        <item>"En Vie'2012'11'EN.pdf"</item>
+        <item>"En Vie'2012'10'EN.pdf"</item>
+        <item>"En Vie'2012'09'EN.pdf"</item>
+        <item>"En Vie'2012'08'EN.pdf"</item>
+        <item>"En Vie'2012'07'EN.pdf"</item>
+        <item>"En Vie'2012'06'EN.pdf"</item>
+        <item>"En Vie'2012'05'EN.pdf"</item>
+        <item>"En Vie'2012'04'EN.pdf"</item>
+        <item>"En Vie'2012'03'EN.pdf"</item>
+        <item>"En Vie'2012'02'EN.pdf"</item>
+        <item>"En Vie'2012'01'EN.pdf"</item>
+        <item>"En Vie'2011'12'EN.pdf"</item>
+        <item>"En Vie'2011'11'EN.pdf"</item>
+        <item>"En Vie'2011'10'EN.pdf"</item>
+        <item>"En Vie'2011'09'EN.pdf"</item>
+        <item>"En Vie'2011'08'EN.pdf"</item>
+        <item>"En Vie'2011'07'EN.pdf"</item>
+        <item>"En Vie'2011'06'EN.pdf"</item>
+        <item>"En Vie'2011'05'EN.pdf"</item>
+        <item>"En Vie'2011'03'EN.pdf"</item>
+        <item>"En Vie'2011'02'EN.pdf"</item>
+        <item>"En Vie'2011'01'EN.pdf"</item>
+    </array>
+
+    <!-- Main Image Title -->
+    <!-- TODO : 別の方法考える -->
+    <array name="title">
+        <item>En Vie 2014 / 04</item>
+        <item>En Vie 2014 / 03</item>
+        <item>En Vie 2014 / 02</item>
+        <item>En Vie 2014 / 01</item>
+        <item>En Vie 2013 / 12</item>
+        <item>En Vie 2013 / 11</item>
+        <item>En Vie 2013 / 10</item>
+        <item>En Vie 2013 / 09</item>
+        <item>En Vie 2013 / 08</item>
+        <item>En Vie 2013 / 07</item>
+        <item>En Vie 2013 / 06</item>
+        <item>En Vie 2013 / 05</item>
+        <item>En Vie 2013 / 04</item>
+        <item>En Vie 2013 / 03</item>
+        <item>En Vie 2013 / 02</item>
+        <item>En Vie 2013 / 01</item>
+        <item>En Vie 2012 / 12</item>
+        <item>En Vie 2012 / 11</item>
+        <item>En Vie 2012 / 10</item>
+        <item>En Vie 2012 / 09</item>
+        <item>En Vie 2012 / 08</item>
+        <item>En Vie 2012 / 07</item>
+        <item>En Vie 2012 / 06</item>
+        <item>En Vie 2012 / 05</item>
+        <item>En Vie 2012 / 04</item>
+        <item>En Vie 2012 / 03</item>
+        <item>En Vie 2012 / 02</item>
+        <item>En Vie 2012 / 01</item>
+        <item>En Vie 2011 / 12</item>
+        <item>En Vie 2011 / 11</item>
+        <item>En Vie 2011 / 10</item>
+        <item>En Vie 2011 / 09</item>
+        <item>En Vie 2011 / 08</item>
+        <item>En Vie 2011 / 07</item>
+        <item>En Vie 2011 / 06</item>
+        <item>En Vie 2011 / 05</item>
+        <item>En Vie 2011 / 03</item>
+        <item>En Vie 2011 / 02</item>
+        <item>En Vie 2011 / 01</item>
+    </array>
+
+    <!-- pdf url -->
+    <array name="pdf_url">
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_04_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_03_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_02_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_01_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_12_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_11_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_10_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_09_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_08_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_07_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_06_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_05_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_04_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_03_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_02_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2013/ENVIE_2013_01_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/ENVIE_2012_12_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/ENVIE_2012_11_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/ENVIE_2012_10_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/ENVIE_2012_09_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/ENVIE_2012_08_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/ENVIE_2012_07_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/ENVIE_2012_06_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/ENVIE_2012_05_EN_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/En_Vie_April_EN_Single.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/En_Vie_12_03_ENGL_single.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/En_Vie_Feb_2012_Engl_1.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2012/En_Vie_Jan_2012_Engl_1.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/EN_VIE_2011_12_EN_single.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/Nov_2011_1_engl.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/OCT_2011_1_engl.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/SEP_2011_1_engl.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/AUG_2011_1_engl.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/JULY_2011_1_engl.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/june_2011_1_engl.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/May_2011_1_engl.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/Mar_2011_1_engl.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/Feb_2011_1_engl.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2011/Jan_2011_1page.pdf"</item>
+    </array>
+
+    <!-- Main Image -->
     <array name="coverID">
+        <item>@drawable/envie_2014_04</item>
+        <item>@drawable/envie_2014_03</item>
         <item>@drawable/envie_2014_02</item>
         <item>@drawable/envie_2014_01</item>
         <item>@drawable/envie_2013_12</item>
@@ -53,7 +236,10 @@
         <item>@drawable/envie_2011_01</item>
     </array>
 
+    <!-- Thumbnail Image on Gallery -->
     <array name="thumbnail">
+        <item>@drawable/envie_thumbnail_2014_04</item>
+        <item>@drawable/envie_thumbnail_2014_03</item>
         <item>@drawable/envie_thumbnail_2014_02</item>
         <item>@drawable/envie_thumbnail_2014_01</item>
         <item>@drawable/envie_thumbnail_2013_12</item>

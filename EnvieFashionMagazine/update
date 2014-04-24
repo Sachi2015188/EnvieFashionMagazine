@@ -1,2 +1,13 @@
 Image Size
+main Image height 640×960px
 thumbnail height 350px
+
+
+//TODO
+marginをとる
+main image をタップしたら目次の画像へ切り替わる
+上部のテキストの切り替えにアニメーション・フォントも変更する
+
+最初のダウンロードリストが固定のためロケールを変えても
+ダウンロードがかわらない。
+

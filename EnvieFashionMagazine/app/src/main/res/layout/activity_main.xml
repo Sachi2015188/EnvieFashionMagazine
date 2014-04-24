@@ -5,26 +5,70 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="team.envie.fashion.magazin.app.activity.MainActivity">
+    tools:context="team.envie.fashion.enviefashion.ui.activity.MainActivity">
 
-    <!-- As the main content view, the view below consumes the entire
-         space available using match_parent in both dimensions. -->
-    <FrameLayout
-        android:id="@+id/container"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:orientation="vertical"
+        tools:context="team.envie.fashion.magazin.app.ui.activity.MainActivity$PlaceholderFragment">
 
-    <!-- android:layout_gravity="start" tells DrawerLayout to treat
-         this as a sliding drawer on the left side for left-to-right
-         languages and on the right side for right-to-left languages.
-         If you're not building against API 17 or higher, use
-         android:layout_gravity="left" instead. -->
-    <!-- The drawer is given a fixed width in dp and extends the full height of
-         the container. -->
-    <fragment android:id="@+id/navigation_drawer"
+        <TextView
+            android:id="@+id/main_title"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="match_parent"
+            android:textColor="@color/white"
+            android:background="@color/red"
+            android:layout_height="@dimen/ui_height"
+            android:layout_margin="@dimen/ui_diff_small"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight=".3">
+
+            <fragment
+                android:id="@+id/fragment_main_image"
+                android:name="team.envie.fashion.enviefashion.ui.fragment.MainImageFragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/ui_diff_small"
+                tools:layout="@layout/fragment_main_image"
+                android:layout_weight=".26">
+            </fragment>
+
+            <fragment
+                android:id="@+id/fragment_main_side"
+                android:name="team.envie.fashion.enviefashion.ui.fragment.MainSideFragment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/ui_diff_small"
+                tools:layout="@layout/fragment_main_side"
+                android:layout_weight=".1">
+            </fragment>
+
+        </LinearLayout>
+
+        <fragment
+            android:name="team.envie.fashion.enviefashion.ui.fragment.MainGallery"
+            android:layout_width="match_parent"
+            android:layout_margin="@dimen/ui_diff_small"
+            android:layout_height="0dp"
+            android:layout_weight=".1"
+            tools:layout="@layout/fragment_main_listview"></fragment>
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/navigation_drawer"
         android:layout_width="@dimen/navigation_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        class="team.envie.fashion.magazin.app.activity.NavigationDrawerFragment" />
+        class="team.envie.fashion.enviefashion.ui.fragment.NavigationDrawerFragment"
+        tools:layout="@layout/fragment_navigation_drawer"/>
 
 </android.support.v4.widget.DrawerLayout>
