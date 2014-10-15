@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.entity;
+package team.envie.fashion.enviefashion.model.entity;
 
 import android.graphics.drawable.Drawable;
 

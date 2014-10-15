@@ -13,10 +13,10 @@ import android.widget.ListView;
 import com.romainpiel.michelangelo.Michelangelo;
 
 import team.envie.fashion.enviefashion.R;
+import team.envie.fashion.enviefashion.model.entity.LocaleItem;
+import team.envie.fashion.enviefashion.logic.LocaleState;
+import team.envie.fashion.enviefashion.view.LocaleItemView;
 
-
-//TODO AcitivityのListをもってくる
-//TODO コールバック関数
 public class ListDialogFragment extends DialogFragment {
 
     private static ListDialogFragment sListDialogFragment;
@@ -26,21 +26,18 @@ public class ListDialogFragment extends DialogFragment {
         return sListDialogFragment;
     }
 
-    team.envie.fashion.enviefashion.entity.LocaleItem[] localeItems = new team.envie.fashion.enviefashion.entity.LocaleItem[]{
-            new team.envie.fashion.enviefashion.entity.LocaleItem("日本語", R.drawable.japanflag),
-            new team.envie.fashion.enviefashion.entity.LocaleItem("English", R.drawable.unitedkingdomflag),
-            new team.envie.fashion.enviefashion.entity.LocaleItem("中文", R.drawable.chinaflag),
-            new team.envie.fashion.enviefashion.entity.LocaleItem("Espanol", R.drawable.spainflag),
-            new team.envie.fashion.enviefashion.entity.LocaleItem("Francais", R.drawable.franceflag),
-            new team.envie.fashion.enviefashion.entity.LocaleItem("Deutsch", R.drawable.germanyflag)
+    LocaleItem[] localeItems = new LocaleItem[]{
+            new LocaleItem("日本語", R.drawable.japanflag),
+            new LocaleItem("English", R.drawable.unitedkingdomflag),
+            new LocaleItem("中文", R.drawable.chinaflag),
+            new LocaleItem("Espanol", R.drawable.spainflag),
+            new LocaleItem("Francais", R.drawable.franceflag),
+            new LocaleItem("Deutsch", R.drawable.germanyflag)
     };
 
 
-    /* ***************************************************************************************
-
-                                            LifeCycle
-
-        ***************************************************************************************  */
+    /* LifeCycle
+     =========================================================================== */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,22 +64,22 @@ public class ListDialogFragment extends DialogFragment {
 
                 switch (position) {
                     case 0:
-                        team.envie.fashion.enviefashion.logic.LocaleState.JAPAN.changeLocale(getActivity());
+                        LocaleState.JAPAN.changeLocale(getActivity());
                         break;
                     case 1:
-                        team.envie.fashion.enviefashion.logic.LocaleState.ENGLISH.changeLocale(getActivity());
+                        LocaleState.ENGLISH.changeLocale(getActivity());
                         break;
                     case 2:
-                        team.envie.fashion.enviefashion.logic.LocaleState.CHINESE.changeLocale(getActivity());
+                        LocaleState.CHINESE.changeLocale(getActivity());
                         break;
                     case 3:
-                        team.envie.fashion.enviefashion.logic.LocaleState.ESPANOL.changeLocale(getActivity());
+                        LocaleState.ESPANOL.changeLocale(getActivity());
                         break;
                     case 4:
-                        team.envie.fashion.enviefashion.logic.LocaleState.FRANCE.changeLocale(getActivity());
+                        LocaleState.FRANCE.changeLocale(getActivity());
                         break;
                     case 5:
-                        team.envie.fashion.enviefashion.logic.LocaleState.DEUTSCH.changeLocale(getActivity());
+                        LocaleState.DEUTSCH.changeLocale(getActivity());
                         break;
                 }
                 sListDialogFragment.dismiss();
@@ -96,9 +93,9 @@ public class ListDialogFragment extends DialogFragment {
     private static class SelfAdapter extends BaseAdapter {
 
         private Context mContext;
-        private team.envie.fashion.enviefashion.entity.LocaleItem[] mItems;
+        private LocaleItem[] mItems;
 
-        public SelfAdapter(Context context, team.envie.fashion.enviefashion.entity.LocaleItem[] items) {
+        public SelfAdapter(Context context, LocaleItem[] items) {
             mContext = context;
             mItems = items;
         }
@@ -109,7 +106,7 @@ public class ListDialogFragment extends DialogFragment {
         }
 
         @Override
-        public team.envie.fashion.enviefashion.entity.LocaleItem getItem(int position) {
+        public LocaleItem getItem(int position) {
             return mItems[position];
         }
 
@@ -121,13 +118,13 @@ public class ListDialogFragment extends DialogFragment {
         @Override
         public View getView(int position, View convertView, ViewGroup viewGroup) {
 
-            team.envie.fashion.enviefashion.view.LocaleItemView localeItemView;
+            LocaleItemView localeItemView;
             if (convertView == null) {
-                localeItemView = Michelangelo.build(mContext, team.envie.fashion.enviefashion.view.LocaleItemView.class);
+                localeItemView = Michelangelo.build(mContext, LocaleItemView.class);
             } else {
-                localeItemView = (team.envie.fashion.enviefashion.view.LocaleItemView) convertView;
+                localeItemView = (LocaleItemView) convertView;
             }
-            team.envie.fashion.enviefashion.entity.LocaleItem item = getItem(position);
+            LocaleItem item = getItem(position);
             localeItemView.bind(item);
             return localeItemView;
         }

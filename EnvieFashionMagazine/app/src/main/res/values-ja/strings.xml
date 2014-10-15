@@ -22,8 +22,6 @@
     <string name="ダウンロードしますか">ダウンロードしますか？</string>
     <string name="menu_settings">Settings</string>
 
-    <string name="最新号">"En Vie　最新号\n'2014'03'JP "</string>
-    <string name="最新号がライブラリに追加">最新号がライブラリに追加されました</string>
     <string name="戻る">戻る</string>
     <string name="キャンセル">キャンセル</string>
     <string name="共有">共有</string>
@@ -32,7 +30,6 @@
     <string name="ログイン">ログイン</string>
     <string name="送信">送信</string>
     <string name="削除">削除</string>
-    <string name="削除してもよろしいですか">削除してもよろしいですか？</string>
     <string name="ダウンロードに失敗しました">ダウンロードに失敗しました</string>
     <string name="閲覧">閲覧</string>
     <string name="無料ダウンロード">無料\nダウンロード</string>
@@ -51,13 +48,7 @@
     <string name="閉じる">閉じる</string>
     <string name="サーバーへの接続に失敗しました">サーバーへの接続に失敗しました</string>
     <string name="こんにちはアンケート協力">こんにちは！En Vieを楽しんで頂けましたか? En Vieが、よりご満足頂ける雑誌へと成長するため、是非アンケートにご協力ください。</string>
-    <string name="男性">男性</string>
-    <string name="女性">女性</string>
-    <string name="年齢">年齢</string>
-    <string name="出身国">出身地</string>
-    <string name="性別">性別</string>
     <string name="インストールされていません">インストールされていません</string>
-    <string name="移動しますか">移動しますか？</string>
     <string name="要望">ご要望</string>
     <string name="言語">言語設定</string>
     <string name="SNS">SNS</string>
@@ -72,6 +63,12 @@
 
     <!-- download File Name -->
     <array name="dlFileName">
+        <item>"En Vie'2014'10'JP.pdf"</item>
+        <item>"En Vie'2014'09'JP.pdf"</item>
+        <item>"En Vie'2014'08'JP.pdf"</item>
+        <item>"En Vie'2014'07'JP.pdf"</item>
+        <item>"En Vie'2014'06'JP.pdf"</item>
+        <item>"En Vie'2014'05'JP.pdf"</item>
         <item>"En Vie'2014'04'JP.pdf"</item>
         <item>"En Vie'2014'03'JP.pdf"</item>
         <item>"En Vie'2014'02'JP.pdf"</item>
@@ -116,6 +113,12 @@
     <!-- Main Image Title -->
     <!-- TODO : 別の方法考える -->
     <array name="title">
+        <item>En Vie 2014 / 10</item>
+        <item>En Vie 2014 / 09</item>
+        <item>En Vie 2014 / 08</item>
+        <item>En Vie 2014 / 07</item>
+        <item>En Vie 2014 / 06</item>
+        <item>En Vie 2014 / 05</item>
         <item>En Vie 2014 / 04</item>
         <item>En Vie 2014 / 03</item>
         <item>En Vie 2014 / 02</item>
@@ -159,6 +162,12 @@
 
     <!-- pdf url -->
     <array name="pdf_url">
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_10_JP_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_09_JP_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_08_JP_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_07_JP_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_06_JP_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_05_JP_S.pdf"</item>
         <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_04_JP_S.pdf"</item>
         <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_03_JP_S.pdf"</item>
         <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_02_JP_S.pdf"</item>
@@ -202,6 +211,12 @@
 
     <!-- Main Image -->
     <array name="coverID">
+        <item>@drawable/envie_2014_10</item>
+        <item>@drawable/envie_2014_09</item>
+        <item>@drawable/envie_2014_08</item>
+        <item>@drawable/envie_2014_07</item>
+        <item>@drawable/envie_2014_06</item>
+        <item>@drawable/envie_2014_05</item>
         <item>@drawable/envie_2014_04</item>
         <item>@drawable/envie_2014_03</item>
         <item>@drawable/envie_2014_02</item>
@@ -245,6 +260,12 @@
 
     <!-- Thumbnail Image on Gallery -->
     <array name="thumbnail">
+        <item>@drawable/envie_thumbnail_2014_10</item>
+        <item>@drawable/envie_thumbnail_2014_09</item>
+        <item>@drawable/envie_thumbnail_2014_08</item>
+        <item>@drawable/envie_thumbnail_2014_07</item>
+        <item>@drawable/envie_thumbnail_2014_06</item>
+        <item>@drawable/envie_thumbnail_2014_05</item>
         <item>@drawable/envie_thumbnail_2014_04</item>
         <item>@drawable/envie_thumbnail_2014_03</item>
         <item>@drawable/envie_thumbnail_2014_02</item>

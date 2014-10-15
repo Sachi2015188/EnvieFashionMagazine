@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.ui.helper;
+package team.envie.fashion.enviefashion.controller.ui.helper;
 
 import android.app.AlertDialog;
 import android.content.Context;

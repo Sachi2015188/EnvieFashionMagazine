@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.ui.activity;
+package team.envie.fashion.enviefashion.controller.ui.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -6,6 +6,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.Window;
 
 import team.envie.fashion.enviefashion.R;
+import team.envie.fashion.enviefashion.controller.ui.fragment.NavigationDrawerFragment;
 
 
 /**
@@ -18,12 +19,12 @@ import team.envie.fashion.enviefashion.R;
  * @version 1.0.0
  */
 public class MainActivity extends FragmentActivity
-        implements team.envie.fashion.enviefashion.ui.fragment.NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
      */
-    private team.envie.fashion.enviefashion.ui.fragment.NavigationDrawerFragment mNavigationDrawerFragment;
+    private NavigationDrawerFragment mNavigationDrawerFragment;
 
     @Override
     protected void onDestroy() {
@@ -37,7 +38,7 @@ public class MainActivity extends FragmentActivity
         setContentView(R.layout.activity_main);
 
         // get Fragment view
-        mNavigationDrawerFragment = (team.envie.fashion.enviefashion.ui.fragment.NavigationDrawerFragment)
+        mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
 
         // Set up the drawer.

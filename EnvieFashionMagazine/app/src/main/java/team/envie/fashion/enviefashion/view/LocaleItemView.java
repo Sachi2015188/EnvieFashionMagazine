@@ -10,6 +10,7 @@ import com.romainpiel.michelangelo.InjectViews;
 
 import butterknife.InjectView;
 import team.envie.fashion.enviefashion.R;
+import team.envie.fashion.enviefashion.model.entity.LocaleItem;
 
 @InflateLayout(R.layout.locale_item)
 @InjectViews
@@ -26,7 +27,7 @@ public class LocaleItemView extends LinearLayout {
         setOrientation(HORIZONTAL);
     }
 
-    public void bind(team.envie.fashion.enviefashion.entity.LocaleItem item) {
+    public void bind(LocaleItem item) {
         mTextView.setText(item.getLocale());
         mImageView.setImageResource(item.getLocaleDrawable());
     }

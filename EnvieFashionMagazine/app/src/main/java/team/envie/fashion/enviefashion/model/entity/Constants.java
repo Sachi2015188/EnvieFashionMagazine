@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.entity;
+package team.envie.fashion.enviefashion.model.entity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -26,9 +26,9 @@ public class Constants {
 
     /**
      * Global DATA List<ImageData>
-     * {@link team.envie.fashion.enviefashion.entity.ImageData}
+     * {@link ImageData}
      */
-    public static final List<team.envie.fashion.enviefashion.entity.ImageData> DATA = new ArrayList<team.envie.fashion.enviefashion.entity.ImageData>(team.envie.fashion.enviefashion.entity.Config.ENVIE_TOTAL_SIZE.getTotalSize());
+    public static final List<ImageData> DATA = new ArrayList<ImageData>(Config.ENVIE_TOTAL_SIZE.getTotalSize());
 
     /**
      * @param context
@@ -47,9 +47,9 @@ public class Constants {
             DATA.clear();
         }
 
-        for (int i = 0; i < team.envie.fashion.enviefashion.entity.Config.ENVIE_TOTAL_SIZE.getTotalSize(); i++) {
+        for (int i = 0; i < Config.ENVIE_TOTAL_SIZE.getTotalSize(); i++) {
             //String imageDateTitle, String pdfUrl, String pdfName, Drawable mainImage, Drawable contentImage, Drawable galleryImage
-            team.envie.fashion.enviefashion.entity.ImageData data = new team.envie.fashion.enviefashion.entity.ImageData(
+            ImageData data = new ImageData(
                     team.envie.fashion.enviefashion.utils.ResourceUtils.getTypedArray(context.getApplicationContext(), R.array.title).getString(i),
                     team.envie.fashion.enviefashion.utils.ResourceUtils.getTypedArray(context.getApplicationContext(), R.array.pdf_url).getString(i),
                     team.envie.fashion.enviefashion.utils.ResourceUtils.getTypedArray(context.getApplicationContext(), R.array.dlFileName).getString(i),

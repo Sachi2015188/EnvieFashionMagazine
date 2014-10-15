@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.entity;
+package team.envie.fashion.enviefashion.model.entity;
 
 
 /**
@@ -10,7 +10,7 @@ package team.envie.fashion.enviefashion.entity;
  */
 public enum Config {
 
-    ENVIE_TOTAL_SIZE(39),
+    ENVIE_TOTAL_SIZE(45),
     TYPEFACE_BICKAM("fonts/BickhamScriptPro-Regular.otf"),
     TYPEFACE_GARAMOND("fonts/AGaramondPro-Italic.otf");
 

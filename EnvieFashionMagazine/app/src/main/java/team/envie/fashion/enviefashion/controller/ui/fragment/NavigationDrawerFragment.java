@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.ui.fragment;
+package team.envie.fashion.enviefashion.controller.ui.fragment;
 
 import android.app.Activity;
 import android.content.SharedPreferences;

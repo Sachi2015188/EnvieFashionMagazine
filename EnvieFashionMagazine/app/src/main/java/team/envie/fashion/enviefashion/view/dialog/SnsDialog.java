@@ -13,6 +13,9 @@ import android.widget.ListView;
 import com.romainpiel.michelangelo.Michelangelo;
 
 import team.envie.fashion.enviefashion.R;
+import team.envie.fashion.enviefashion.model.entity.LocaleItem;
+import team.envie.fashion.enviefashion.logic.SnsState;
+import team.envie.fashion.enviefashion.view.LocaleItemView;
 
 
 public class SnsDialog extends DialogFragment {
@@ -24,18 +27,14 @@ public class SnsDialog extends DialogFragment {
         return sSnsDialog;
     }
 
-    team.envie.fashion.enviefashion.entity.LocaleItem[] localeItems = new team.envie.fashion.enviefashion.entity.LocaleItem[]{
-            new team.envie.fashion.enviefashion.entity.LocaleItem("FACEBOOK", R.drawable.facebook),
-            new team.envie.fashion.enviefashion.entity.LocaleItem("TWITTER", R.drawable.twitter),
-            new team.envie.fashion.enviefashion.entity.LocaleItem("WEIBO", R.drawable.weibo),
+    LocaleItem[] localeItems = new LocaleItem[]{
+            new LocaleItem("FACEBOOK", R.drawable.facebook),
+            new LocaleItem("TWITTER", R.drawable.twitter),
+            new LocaleItem("WEIBO", R.drawable.weibo),
     };
 
-
-    /* ***************************************************************************************
-
-                                            LifeCycle
-
-        ***************************************************************************************  */
+    /* LifeCycle
+     =========================================================================== */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,13 +61,13 @@ public class SnsDialog extends DialogFragment {
 
                 switch (position) {
                     case 0:
-                        team.envie.fashion.enviefashion.logic.SnsState.FACEBOOK.moveSns(getActivity());
+                        SnsState.FACEBOOK.moveSns(getActivity());
                         break;
                     case 1:
-                        team.envie.fashion.enviefashion.logic.SnsState.TWITTER.moveSns(getActivity());
+                        SnsState.TWITTER.moveSns(getActivity());
                         break;
                     case 2:
-                        team.envie.fashion.enviefashion.logic.SnsState.WEIBO.moveSns(getActivity());
+                        SnsState.WEIBO.moveSns(getActivity());
                         break;
                 }
                 sSnsDialog.dismiss();
@@ -82,9 +81,9 @@ public class SnsDialog extends DialogFragment {
     private static class SelfAdapter extends BaseAdapter {
 
         private Context mContext;
-        private team.envie.fashion.enviefashion.entity.LocaleItem[] mItems;
+        private LocaleItem[] mItems;
 
-        public SelfAdapter(Context context, team.envie.fashion.enviefashion.entity.LocaleItem[] items) {
+        public SelfAdapter(Context context, LocaleItem[] items) {
             mContext = context;
             mItems = items;
         }
@@ -95,7 +94,7 @@ public class SnsDialog extends DialogFragment {
         }
 
         @Override
-        public team.envie.fashion.enviefashion.entity.LocaleItem getItem(int position) {
+        public LocaleItem getItem(int position) {
             return mItems[position];
         }
 
@@ -107,13 +106,13 @@ public class SnsDialog extends DialogFragment {
         @Override
         public View getView(int position, View convertView, ViewGroup viewGroup) {
 
-            team.envie.fashion.enviefashion.view.LocaleItemView localeItemView;
+            LocaleItemView localeItemView;
             if (convertView == null) {
-                localeItemView = Michelangelo.build(mContext, team.envie.fashion.enviefashion.view.LocaleItemView.class);
+                localeItemView = Michelangelo.build(mContext, LocaleItemView.class);
             } else {
-                localeItemView = (team.envie.fashion.enviefashion.view.LocaleItemView) convertView;
+                localeItemView = (LocaleItemView) convertView;
             }
-            team.envie.fashion.enviefashion.entity.LocaleItem item = getItem(position);
+            LocaleItem item = getItem(position);
             localeItemView.bind(item);
             return localeItemView;
         }

@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.ui.fragment;
+package team.envie.fashion.enviefashion.controller.ui.fragment;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -19,6 +19,8 @@ import android.widget.ViewSwitcher;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import team.envie.fashion.enviefashion.R;
+import team.envie.fashion.enviefashion.controller.ui.activity.ApplicationController;
+import team.envie.fashion.enviefashion.model.entity.Constants;
 
 
 /**
@@ -28,7 +30,7 @@ import team.envie.fashion.enviefashion.R;
  *          MainActivity bottom listview fragment
  *          </p>
  */
-public class MainGallery extends team.envie.fashion.enviefashion.ui.fragment.BaseFragment implements ViewSwitcher.ViewFactory {
+public class MainGallery extends BaseFragment implements ViewSwitcher.ViewFactory {
 
     /**
      * Gallery Adapter
@@ -82,7 +84,7 @@ public class MainGallery extends team.envie.fashion.enviefashion.ui.fragment.Bas
 
         // Main Screen title
         mTitle = ButterKnife.findById(getActivity(), R.id.main_title);
-        mTitle.setText(team.envie.fashion.enviefashion.entity.Constants.DATA.get(0).getImageDateTitle());
+        mTitle.setText(Constants.DATA.get(0).getImageDateTitle());
 
         // TODO テキストのチェンジアニメーション
         // https://android.googlesource.com/platform/development/+/master/samples/ApiDemos/src/com/example/android/apis/view/Animation2.java
@@ -94,8 +96,8 @@ public class MainGallery extends team.envie.fashion.enviefashion.ui.fragment.Bas
                 mMainImage.setInAnimation(getActivity(), android.R.anim.fade_in);
                 mMainImage.setOutAnimation(getActivity(), android.R.anim.fade_out);
                 mMainImage.setImageDrawable(getTypedArray(R.array.coverID).getDrawable(position));
-                mTitle.setText(team.envie.fashion.enviefashion.entity.Constants.DATA.get(position).getImageDateTitle());
-                team.envie.fashion.enviefashion.ui.activity.ApplicationController.position = position;
+                mTitle.setText(Constants.DATA.get(position).getImageDateTitle());
+                ApplicationController.position = position;
             }
         });
 

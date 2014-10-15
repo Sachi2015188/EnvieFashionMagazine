@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="team.envie.fashion.enviefashion.ui.activity.MainActivity">
+    tools:context="team.envie.fashion.enviefashion.controller.ui.activity.MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,7 @@
 
             <fragment
                 android:id="@+id/fragment_main_image"
-                android:name="team.envie.fashion.enviefashion.ui.fragment.MainImageFragment"
+                android:name="team.envie.fashion.enviefashion.controller.ui.fragment.MainImageFragment"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/ui_diff_small"
@@ -44,7 +44,7 @@
 
             <fragment
                 android:id="@+id/fragment_main_side"
-                android:name="team.envie.fashion.enviefashion.ui.fragment.MainSideFragment"
+                android:name="team.envie.fashion.enviefashion.controller.ui.fragment.MainSideFragment"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="@dimen/ui_diff_small"
@@ -55,7 +55,7 @@
         </LinearLayout>
 
         <fragment
-            android:name="team.envie.fashion.enviefashion.ui.fragment.MainGallery"
+            android:name="team.envie.fashion.enviefashion.controller.ui.fragment.MainGallery"
             android:layout_width="match_parent"
             android:layout_margin="@dimen/ui_diff_small"
             android:layout_height="0dp"
@@ -68,7 +68,7 @@
         android:layout_width="@dimen/navigation_drawer_width"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        class="team.envie.fashion.enviefashion.ui.fragment.NavigationDrawerFragment"
+        class="team.envie.fashion.enviefashion.controller.ui.fragment.NavigationDrawerFragment"
         tools:layout="@layout/fragment_navigation_drawer"/>
 
 </android.support.v4.widget.DrawerLayout>

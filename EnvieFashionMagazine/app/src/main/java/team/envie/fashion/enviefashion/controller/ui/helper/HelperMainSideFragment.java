@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.ui.helper;
+package team.envie.fashion.enviefashion.controller.ui.helper;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,6 +10,8 @@ import android.widget.Toast;
 import java.io.File;
 
 import team.envie.fashion.enviefashion.R;
+import team.envie.fashion.enviefashion.controller.ui.activity.ApplicationController;
+import team.envie.fashion.enviefashion.model.entity.Constants;
 
 
 /*
@@ -23,7 +25,7 @@ import team.envie.fashion.enviefashion.R;
  *              Activity Helper Litner Class
  *          </p>
  */
-public class HelperMainSideFragment implements team.envie.fashion.enviefashion.ui.helper.FileOpenDialogListener {
+public class HelperMainSideFragment implements FileOpenDialogListener {
 
     private static final String TAG = "DIALOG";
 
@@ -31,12 +33,12 @@ public class HelperMainSideFragment implements team.envie.fashion.enviefashion.u
 
     private team.envie.fashion.enviefashion.chain.main.ChainIntent mChainIntent;
 
-    private team.envie.fashion.enviefashion.ui.helper.FileOpenDialog mFileOpenDialog;
+    private FileOpenDialog mFileOpenDialog;
 
     public HelperMainSideFragment(FragmentActivity activity) {
         ac = activity;
         mChainIntent = new team.envie.fashion.enviefashion.chain.main.ChainIntent(activity);
-        mFileOpenDialog = new team.envie.fashion.enviefashion.ui.helper.FileOpenDialog(ac, this, false);
+        mFileOpenDialog = new FileOpenDialog(ac, this, false);
     }
 
     public View.OnClickListener downloadListener = new View.OnClickListener() {
@@ -54,8 +56,8 @@ public class HelperMainSideFragment implements team.envie.fashion.enviefashion.u
                     super.yesClick();
                     team.envie.fashion.enviefashion.receiver.DownloadReceiver.download(ac,
                             ac.getResources().getString(R.string.directoryName),
-                            team.envie.fashion.enviefashion.entity.Constants.DATA.get(team.envie.fashion.enviefashion.ui.activity.ApplicationController.position).getPdfUrl(),
-                            team.envie.fashion.enviefashion.entity.Constants.DATA.get(team.envie.fashion.enviefashion.ui.activity.ApplicationController.position).getPdfName());
+                            Constants.DATA.get(ApplicationController.position).getPdfUrl(),
+                            Constants.DATA.get(ApplicationController.position).getPdfName());
                 }
 
                 @Override

@@ -12,8 +12,6 @@ import org.apache.commons.lang3.StringUtils;
 
 import team.envie.fashion.enviefashion.R;
 
-// TODO Buidler形式へ変更する
-
 /**
  * @author Shuhei Iwamoto
  * @version 1.0.0
@@ -37,7 +35,7 @@ public class Alert extends DialogFragment {
 
     private static View sView;
 
-    private static team.envie.fashion.enviefashion.Alert.YesNoListener sListener;
+    private static YesNoListener sListener;
 
     /**
      * instance
@@ -49,7 +47,7 @@ public class Alert extends DialogFragment {
         return sInstance;
     }
 
-    public static Alert newInstance(String title, String message, final team.envie.fashion.enviefashion.Alert.YesNoListener listener) {
+    public static Alert newInstance(String title, String message, final YesNoListener listener) {
         sTitle = title;
         sMessage = message;
         sListener = listener;
@@ -57,7 +55,7 @@ public class Alert extends DialogFragment {
         return sInstance;
     }
 
-    public static Alert newInstance(String title, String message, View view, final team.envie.fashion.enviefashion.Alert.YesNoListener listener) {
+    public static Alert newInstance(String title, String message, View view, final YesNoListener listener) {
         sTitle = title;
         sMessage = message;
         sListener = listener;

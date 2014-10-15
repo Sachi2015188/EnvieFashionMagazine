@@ -22,8 +22,6 @@
     <string name="ダウンロードしますか">Sie herunterladen möchten?</string>
     <string name="menu_settings">Settings</string>
 
-    <string name="最新号">"En Vie　最新号\n'2014'03'DU "</string>
-    <string name="最新号がライブラリに追加">Eine neue Ausgabe kann jetzt </string>
     <string name="戻る">zurück</string>
     <string name="キャンセル">abbrechen</string>
     <string name="共有">teilen</string>
@@ -65,6 +63,12 @@
 
     <!-- download File Name -->
     <array name="dlFileName">
+        <item>"En Vie'2014'10'DU.pdf"</item>
+        <item>"En Vie'2014'09'DU.pdf"</item>
+        <item>"En Vie'2014'08'DU.pdf"</item>
+        <item>"En Vie'2014'07'DU.pdf"</item>
+        <item>"En Vie'2014'06'DU.pdf"</item>
+        <item>"En Vie'2014'05'DU.pdf"</item>
         <item>"En Vie'2014'04'DU.pdf"</item>
         <item>"En Vie'2014'03'DU.pdf"</item>
         <item>"En Vie'2014'02'DU.pdf"</item>
@@ -109,6 +113,12 @@
     <!-- Main Image Title -->
     <!-- TODO : 別の方法考える -->
     <array name="title">
+        <item>En Vie 2014 / 10</item>
+        <item>En Vie 2014 / 09</item>
+        <item>En Vie 2014 / 08</item>
+        <item>En Vie 2014 / 07</item>
+        <item>En Vie 2014 / 06</item>
+        <item>En Vie 2014 / 05</item>
         <item>En Vie 2014 / 04</item>
         <item>En Vie 2014 / 03</item>
         <item>En Vie 2014 / 02</item>
@@ -152,6 +162,12 @@
 
     <!-- pdf url -->
     <array name="pdf_url">
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_10_DE_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_09_DE_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_08_DE_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_07_DE_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_06_DE_S.pdf"</item>
+        <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_05_DE_S.pdf"</item>
         <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_04_DE_S.pdf"</item>
         <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_03_DE_S.pdf"</item>
         <item>"http://www.en-vie-fashion.com/2014/ENVIE_2014_02_DE_S.pdf"</item>
@@ -195,6 +211,12 @@
 
     <!-- Main Image -->
     <array name="coverID">
+        <item>@drawable/envie_2014_10</item>
+        <item>@drawable/envie_2014_09</item>
+        <item>@drawable/envie_2014_08</item>
+        <item>@drawable/envie_2014_07</item>
+        <item>@drawable/envie_2014_06</item>
+        <item>@drawable/envie_2014_05</item>
         <item>@drawable/envie_2014_04</item>
         <item>@drawable/envie_2014_03</item>
         <item>@drawable/envie_2014_02</item>
@@ -238,6 +260,12 @@
 
     <!-- Thumbnail Image on Gallery -->
     <array name="thumbnail">
+        <item>@drawable/envie_thumbnail_2014_10</item>
+        <item>@drawable/envie_thumbnail_2014_09</item>
+        <item>@drawable/envie_thumbnail_2014_08</item>
+        <item>@drawable/envie_thumbnail_2014_07</item>
+        <item>@drawable/envie_thumbnail_2014_06</item>
+        <item>@drawable/envie_thumbnail_2014_05</item>
         <item>@drawable/envie_thumbnail_2014_04</item>
         <item>@drawable/envie_thumbnail_2014_03</item>
         <item>@drawable/envie_thumbnail_2014_02</item>

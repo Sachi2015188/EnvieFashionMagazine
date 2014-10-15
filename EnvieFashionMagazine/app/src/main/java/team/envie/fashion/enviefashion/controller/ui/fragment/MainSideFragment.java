@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.ui.fragment;
+package team.envie.fashion.enviefashion.controller.ui.fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,6 +13,7 @@ import com.romainpiel.michelangelo.InjectViews;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import team.envie.fashion.enviefashion.R;
+import team.envie.fashion.enviefashion.controller.ui.helper.HelperMainSideFragment;
 
 
 /**
@@ -24,7 +25,7 @@ import team.envie.fashion.enviefashion.R;
  */
 @InflateLayout(R.layout.fragment_main_side)
 @InjectViews
-public class MainSideFragment extends team.envie.fashion.enviefashion.ui.fragment.BaseFragment {
+public class MainSideFragment extends BaseFragment {
 
     /**
      * ImageView Download Button
@@ -47,14 +48,14 @@ public class MainSideFragment extends team.envie.fashion.enviefashion.ui.fragmen
     @InjectView(R.id.fragment_main_side_description) TextView mContentDescription;
 
 
-    private team.envie.fashion.enviefashion.ui.helper.HelperMainSideFragment mListner;
+    private HelperMainSideFragment mListner;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_main_side, container, false);
 
         // init HelperListener
-        mListner = new team.envie.fashion.enviefashion.ui.helper.HelperMainSideFragment(getActivity());
+        mListner = new HelperMainSideFragment(getActivity());
 
         // init Butterknife
         ButterKnife.inject(this, view);

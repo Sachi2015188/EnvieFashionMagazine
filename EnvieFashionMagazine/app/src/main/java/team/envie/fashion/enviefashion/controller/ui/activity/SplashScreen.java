@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.ui.activity;
+package team.envie.fashion.enviefashion.controller.ui.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import team.envie.fashion.enviefashion.R;
+import team.envie.fashion.enviefashion.controller.ui.fragment.BaseFragment;
+import team.envie.fashion.enviefashion.model.entity.Constants;
 
 
 /**
@@ -32,13 +34,13 @@ public class SplashScreen extends FragmentActivity {
                     .commit();
         }
 
-        team.envie.fashion.enviefashion.entity.Constants.setUpData(getApplicationContext());
+        Constants.setUpData(getApplicationContext());
     }
 
     /**
      * A placeholder fragment containing a simple view.
      */
-    public static class PlaceholderFragment extends team.envie.fashion.enviefashion.ui.fragment.BaseFragment {
+    public static class PlaceholderFragment extends BaseFragment {
 
         // Set Duration of the Splash Screen
         int Delay = 900;
@@ -60,7 +62,7 @@ public class SplashScreen extends FragmentActivity {
 
                 @Override
                 public void run() {
-                    chainIntent.name(team.envie.fashion.enviefashion.ui.activity.MainActivity.class).moveActivity()
+                    chainIntent.name(MainActivity.class).moveActivity()
                             .overridePending(R.anim.splash_fade_in, R.anim.splash_fade_out)
                             .finish();
                 }

@@ -1,4 +1,4 @@
-package team.envie.fashion.enviefashion.ui.activity;
+package team.envie.fashion.enviefashion.controller.ui.activity;
 
 import android.app.Application;
 import android.content.res.Configuration;

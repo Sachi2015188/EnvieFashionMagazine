@@ -3,5 +3,5 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="team.envie.fashion.enviefashion.ui.activity.SplashScreen"
+    tools:context="team.envie.fashion.enviefashion.controller.ui.activity.SplashScreen"
     tools:ignore="MergeRootFrame" />
